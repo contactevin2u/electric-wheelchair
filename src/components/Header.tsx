@@ -38,7 +38,7 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="https://wa.me/60123456789"
+              href="https://wa.me/60112832452"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors"
@@ -91,7 +91,7 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="https://wa.me/60123456789"
+              href="https://wa.me/60112832452"
               target="_blank"
               rel="noopener noreferrer"
               className="block mt-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium text-center"

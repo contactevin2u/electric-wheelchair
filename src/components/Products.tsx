@@ -98,7 +98,7 @@ export default function Products() {
                     <span className="text-green-600 font-bold">{product.rentalPrice}</span>
                   </div>
                   <a
-                    href="https://wa.me/60123456789"
+                    href="https://wa.me/60112832452"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition-colors"

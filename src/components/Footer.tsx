@@ -98,7 +98,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>+60 12-345 6789</li>
+              <li>+60 11-2832 2452</li>
               <li>info@electric-wheelchair.my</li>
               <li>
                 123 Jalan Example,<br />

@@ -38,7 +38,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-bold text-gray-800 mb-1">Phone</h3>
-                <p className="text-gray-600">+60 12-345 6789</p>
+                <p className="text-gray-600">+60 11-2832 2452</p>
               </div>
             </div>
 
@@ -63,7 +63,7 @@ export default function Contact() {
               <div>
                 <h3 className="font-bold text-gray-800 mb-1">WhatsApp</h3>
                 <a
-                  href="https://wa.me/60123456789"
+                  href="https://wa.me/60112832452"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-600 hover:underline"

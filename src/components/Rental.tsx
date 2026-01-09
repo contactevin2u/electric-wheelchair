@@ -91,7 +91,7 @@ export default function Rental() {
                 ))}
               </ul>
               <a
-                href="https://wa.me/60123456789"
+                href="https://wa.me/60112832452"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block w-full text-center py-3 rounded-lg font-semibold transition-colors ${
