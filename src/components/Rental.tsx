@@ -1,38 +1,41 @@
+'use client'
+
+import { useLanguage } from '@/context/LanguageContext'
+
 export default function Rental() {
+  const { t } = useLanguage()
+
   const rentalPlans = [
     {
-      name: 'Basic',
+      nameKey: 'rental.basic',
       price: 'RM 400',
-      period: '/month',
       features: [
-        'Standard Electric Wheelchair',
-        'Free Delivery',
-        'Basic Support',
-        'Monthly Payment',
+        'rental.basic.f1',
+        'rental.basic.f2',
+        'rental.basic.f3',
+        'rental.basic.f4',
       ],
       popular: false,
     },
     {
-      name: 'Premium',
+      nameKey: 'rental.premium',
       price: 'RM 550',
-      period: '/month',
       features: [
-        'Heavy Duty Wheelchair',
-        'Free Delivery & Setup',
-        'Priority Support',
-        'Free Maintenance',
+        'rental.premium.f1',
+        'rental.premium.f2',
+        'rental.premium.f3',
+        'rental.premium.f4',
       ],
       popular: true,
     },
     {
-      name: 'Deluxe',
+      nameKey: 'rental.deluxe',
       price: 'RM 650',
-      period: '/month',
       features: [
-        'Reclining Wheelchair',
-        'Free Delivery & Setup',
-        '24/7 Support',
-        'Free Maintenance & Replacement',
+        'rental.deluxe.f1',
+        'rental.deluxe.f2',
+        'rental.deluxe.f3',
+        'rental.deluxe.f4',
       ],
       popular: false,
     },
@@ -43,10 +46,10 @@ export default function Rental() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Rental Plans
+            {t('rental.title')}
           </h2>
           <p className="text-blue-100 text-lg max-w-2xl mx-auto">
-            Flexible rental options to suit your needs. No long-term commitment required.
+            {t('rental.subtitle')}
           </p>
         </div>
 
@@ -62,13 +65,13 @@ export default function Rental() {
             >
               {plan.popular && (
                 <div className="bg-accent text-white text-sm font-bold px-4 py-1 rounded-full inline-block mb-4">
-                  Most Popular
+                  {t('rental.popular')}
                 </div>
               )}
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">{plan.name}</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">{t(plan.nameKey)}</h3>
               <div className="mb-6">
                 <span className="text-4xl font-bold text-primary">{plan.price}</span>
-                <span className="text-gray-500">{plan.period}</span>
+                <span className="text-gray-500">{t('hero.perMonth')}</span>
               </div>
               <ul className="space-y-3 mb-8">
                 {plan.features.map((feature, i) => (
@@ -86,12 +89,12 @@ export default function Rental() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span className="text-gray-600">{feature}</span>
+                    <span className="text-gray-600">{t(feature)}</span>
                   </li>
                 ))}
               </ul>
               <a
-                href="https://wa.me/60112832452"
+                href="https://wa.me/601128322452"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block w-full text-center py-3 rounded-lg font-semibold transition-colors ${
@@ -100,7 +103,7 @@ export default function Rental() {
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-800'
                 }`}
               >
-                Get Started
+                {t('rental.getStarted')}
               </a>
             </div>
           ))}

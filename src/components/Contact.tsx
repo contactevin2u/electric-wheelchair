@@ -1,13 +1,19 @@
+'use client'
+
+import { useLanguage } from '@/context/LanguageContext'
+
 export default function Contact() {
+  const { t } = useLanguage()
+
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Contact Us
+            {t('contact.title')}
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Have questions? We&apos;re here to help. Reach out to us through any of the channels below.
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -21,11 +27,11 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-bold text-gray-800 mb-1">Address</h3>
+                <h3 className="font-bold text-gray-800 mb-1">{t('contact.address')}</h3>
                 <p className="text-gray-600">
-                  123 Jalan Example,<br />
-                  47500 Subang Jaya,<br />
-                  Selangor, Malaysia
+                  Lot 1, Jalan Perusahaan 4,<br />
+                  Kawasan Industri Batu Caves,<br />
+                  68100 Batu Caves, Selangor
                 </p>
               </div>
             </div>
@@ -37,7 +43,7 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-bold text-gray-800 mb-1">Phone</h3>
+                <h3 className="font-bold text-gray-800 mb-1">{t('contact.phone')}</h3>
                 <p className="text-gray-600">+60 11-2832 2452</p>
               </div>
             </div>
@@ -49,7 +55,7 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-bold text-gray-800 mb-1">Email</h3>
+                <h3 className="font-bold text-gray-800 mb-1">{t('contact.email')}</h3>
                 <p className="text-gray-600">info@electric-wheelchair.my</p>
               </div>
             </div>
@@ -61,51 +67,51 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-bold text-gray-800 mb-1">WhatsApp</h3>
+                <h3 className="font-bold text-gray-800 mb-1">{t('contact.whatsapp')}</h3>
                 <a
-                  href="https://wa.me/60112832452"
+                  href="https://wa.me/601128322452"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-600 hover:underline"
                 >
-                  Chat with us on WhatsApp
+                  {t('contact.chat')}
                 </a>
               </div>
             </div>
           </div>
 
           <div className="bg-white rounded-xl shadow-lg p-8">
-            <h3 className="text-xl font-bold text-gray-800 mb-6">Send us a message</h3>
+            <h3 className="text-xl font-bold text-gray-800 mb-6">{t('contact.form.title')}</h3>
             <form className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{t('contact.form.name')}</label>
                 <input
                   type="text"
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                  placeholder="Your name"
+                  placeholder={t('contact.form.namePlaceholder')}
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{t('contact.form.phone')}</label>
                 <input
                   type="tel"
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                  placeholder="Your phone number"
+                  placeholder={t('contact.form.phonePlaceholder')}
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{t('contact.form.message')}</label>
                 <textarea
                   rows={4}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                  placeholder="How can we help you?"
+                  placeholder={t('contact.form.messagePlaceholder')}
                 ></textarea>
               </div>
               <button
                 type="submit"
                 className="w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors"
               >
-                Send Message
+                {t('contact.form.send')}
               </button>
             </form>
           </div>

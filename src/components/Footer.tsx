@@ -1,6 +1,11 @@
+'use client'
+
 import Link from 'next/link'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function Footer() {
+  const { t } = useLanguage()
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -14,7 +19,7 @@ export default function Footer() {
               <span className="text-xl font-bold">Electric Wheelchair</span>
             </div>
             <p className="text-gray-400 mb-4">
-              Your trusted partner for quality electric wheelchairs and mobility solutions in Malaysia.
+              {t('footer.tagline')}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -37,31 +42,31 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-gray-400 hover:text-white transition-colors">
-                  Home
+                  {t('nav.home')}
                 </Link>
               </li>
               <li>
                 <Link href="#products" className="text-gray-400 hover:text-white transition-colors">
-                  Products
+                  {t('nav.products')}
                 </Link>
               </li>
               <li>
                 <Link href="#rental" className="text-gray-400 hover:text-white transition-colors">
-                  Rental Plans
+                  {t('nav.rental')}
                 </Link>
               </li>
               <li>
                 <Link href="#about" className="text-gray-400 hover:text-white transition-colors">
-                  About Us
+                  {t('nav.about')}
                 </Link>
               </li>
               <li>
                 <Link href="#contact" className="text-gray-400 hover:text-white transition-colors">
-                  Contact
+                  {t('nav.contact')}
                 </Link>
               </li>
             </ul>
@@ -69,26 +74,26 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Products</h3>
+            <h3 className="text-lg font-bold mb-4">{t('footer.products')}</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Electric Wheelchairs
+                <a href="#products" className="text-gray-400 hover:text-white transition-colors">
+                  {t('footer.electricWheelchairs')}
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Mobility Scooters
+                <a href="#products" className="text-gray-400 hover:text-white transition-colors">
+                  {t('footer.mobilityScooters')}
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Wheelchair Parts
+                <a href="#products" className="text-gray-400 hover:text-white transition-colors">
+                  {t('footer.wheelchairParts')}
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Accessories
+                <a href="#products" className="text-gray-400 hover:text-white transition-colors">
+                  {t('footer.accessories')}
                 </a>
               </li>
             </ul>
@@ -96,21 +101,21 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Contact</h3>
+            <h3 className="text-lg font-bold mb-4">{t('footer.contact')}</h3>
             <ul className="space-y-2 text-gray-400">
               <li>+60 11-2832 2452</li>
               <li>info@electric-wheelchair.my</li>
               <li>
-                123 Jalan Example,<br />
-                47500 Subang Jaya,<br />
-                Selangor, Malaysia
+                Lot 1, Jalan Perusahaan 4,<br />
+                Kawasan Industri Batu Caves,<br />
+                68100 Batu Caves, Selangor
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Electric Wheelchair Malaysia. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {t('footer.copyright')}</p>
         </div>
       </div>
     </footer>
