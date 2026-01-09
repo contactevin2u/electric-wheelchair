@@ -12,6 +12,11 @@ const nextConfig = {
         hostname: 'electric-wheelchair.my',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
     ],
   },
 }

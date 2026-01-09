@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useLanguage } from '@/context/LanguageContext'
 
 export default function Products() {
@@ -13,6 +14,7 @@ export default function Products() {
       price: 'RM 3,500',
       rentalPrice: 'RM 400/month',
       features: ['feature.foldable', 'feature.lightweight', 'feature.range20'],
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop',
     },
     {
       id: 2,
@@ -21,6 +23,7 @@ export default function Products() {
       price: 'RM 5,500',
       rentalPrice: 'RM 550/month',
       features: ['feature.capacity', 'feature.comfortable', 'feature.range25'],
+      image: 'https://images.unsplash.com/photo-1631815587646-b85a1bb027e1?w=400&h=300&fit=crop',
     },
     {
       id: 3,
@@ -29,6 +32,7 @@ export default function Products() {
       price: 'RM 6,800',
       rentalPrice: 'RM 650/month',
       features: ['feature.recline', 'feature.headrest', 'feature.range30'],
+      image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=400&h=300&fit=crop',
     },
     {
       id: 4,
@@ -37,6 +41,7 @@ export default function Products() {
       price: 'RM 4,200',
       rentalPrice: 'RM 480/month',
       features: ['feature.compact', 'feature.indoor', 'feature.range22'],
+      image: 'https://images.unsplash.com/photo-1617575521317-d2974f3b56d2?w=400&h=300&fit=crop',
     },
   ]
 
@@ -58,20 +63,13 @@ export default function Products() {
               key={product.id}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
-              <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                <svg
-                  className="w-24 h-24 text-primary"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                  />
-                </svg>
+              <div className="relative h-48">
+                <Image
+                  src={product.image}
+                  alt={t(product.nameKey)}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-gray-800 mb-2">
