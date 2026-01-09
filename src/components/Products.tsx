@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { useLanguage } from '@/context/LanguageContext'
 
 export default function Products() {
@@ -14,7 +13,6 @@ export default function Products() {
       price: 'RM 3,500',
       rentalPrice: 'RM 400/month',
       features: ['feature.foldable', 'feature.lightweight', 'feature.range20'],
-      image: 'https://www.electric-wheelchair.my/wp-content/uploads/2024/03/Electric-Wheelchair-Malaysia.webp',
     },
     {
       id: 2,
@@ -23,7 +21,6 @@ export default function Products() {
       price: 'RM 5,500',
       rentalPrice: 'RM 550/month',
       features: ['feature.capacity', 'feature.comfortable', 'feature.range25'],
-      image: 'https://www.electric-wheelchair.my/wp-content/uploads/2024/03/Electric-Wheelchair-Malaysia.webp',
     },
     {
       id: 3,
@@ -32,7 +29,6 @@ export default function Products() {
       price: 'RM 6,800',
       rentalPrice: 'RM 650/month',
       features: ['feature.recline', 'feature.headrest', 'feature.range30'],
-      image: 'https://www.electric-wheelchair.my/wp-content/uploads/2024/03/Electric-Wheelchair-Malaysia.webp',
     },
     {
       id: 4,
@@ -41,7 +37,6 @@ export default function Products() {
       price: 'RM 4,200',
       rentalPrice: 'RM 480/month',
       features: ['feature.compact', 'feature.indoor', 'feature.range22'],
-      image: 'https://www.electric-wheelchair.my/wp-content/uploads/2024/03/Electric-Wheelchair-Malaysia.webp',
     },
   ]
 
@@ -63,13 +58,20 @@ export default function Products() {
               key={product.id}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
-              <div className="relative h-48">
-                <Image
-                  src={product.image}
-                  alt={t(product.nameKey)}
-                  fill
-                  className="object-cover"
-                />
+              <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                <svg
+                  className="w-24 h-24 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                  />
+                </svg>
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-gray-800 mb-2">

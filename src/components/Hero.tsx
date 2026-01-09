@@ -60,14 +60,13 @@ export default function Hero() {
             </div>
           </div>
           <div className="hidden md:block">
-            <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="https://www.electric-wheelchair.my/wp-content/uploads/2024/03/Electric-Wheelchair-Malaysia.webp"
-                alt="Electric Wheelchair"
-                fill
-                className="object-cover"
-                priority
-              />
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
+              <div className="w-64 h-64 mx-auto bg-white/20 rounded-full flex items-center justify-center mb-4">
+                <svg className="w-32 h-32 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <p className="text-white text-lg">{t('hero.partner')}</p>
             </div>
           </div>
         </div>
